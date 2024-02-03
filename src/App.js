@@ -1,9 +1,11 @@
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <div>
-      <h1>Hello</h1>
+      <div className='calc-wrapper'>
+<h1>Heading</h1>
+      </div>
     </div>
   );
 }
