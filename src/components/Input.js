@@ -2,14 +2,14 @@ import React from 'react'
 
 import './Input.css'
 
-function Input() {
+function Input({text, result}) {
     return (
         <div className='input-wrapper'>
             <div className='result'>
-                <h1>Result</h1>
+                <h1>{result}</h1>
             </div>
             <div className='text'>
-                <h3>Text</h3>
+                <h3>{text}</h3>
             </div>
         </div>
     )

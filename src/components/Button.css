@@ -7,4 +7,7 @@
     background-color: #5a5a5a;
     color: white;
     flex: 1;
+
+    margin: 4px;
+    border-radius: 25px;
 }
