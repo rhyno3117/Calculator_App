@@ -1,6 +1,5 @@
 body {
 background-color: black;
-color: white;
 }
 
 .App{
@@ -13,4 +12,8 @@ color: white;
   background-color: white;
   width: 400px;
   border-radius: 16px;
+}
+
+.row{
+  display: flex;
 }
