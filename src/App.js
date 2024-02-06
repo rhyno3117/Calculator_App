@@ -36,7 +36,9 @@ const App = () => {
     setResult("");
   }
 
-  const buttonColor = "#f2a33c";
+  const buttonColor = "#00abf0";
+
+  // const buttonColor = "#f2a33c";
 
 
   return (
