@@ -11,9 +11,12 @@
 .result {
     flex: 1;
     font-size: 24px;
+    color: white
+
 }
 
 .text {
     flex: 1;
     font-size: 18px;
+    color: white
 }

@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import * as math from "mathjs";
 import './App.css';
 import Button from './components/Button';
@@ -10,16 +9,28 @@ const App = () => {
   const [text, setText] = useState("");
   const [result, setResult] = useState("");
 
+
+
   const addToText = (val) => {
-    setText((text) => [...text, val + " "]);
+    setText((text) => {
+      const lastChar = text[text.length - 1];
+      // Check if the last character is an operator or a space, and the new value is an operator
+      if ((lastChar === '+' || lastChar === '-' || lastChar === '*' || lastChar === '/') && (val === '+' || val === '-' || val === '*' || val === '/')) {
+        return [...text.slice(0, -1), val];
+      } else {
+        return [...text, val];
+      }
+    });
   }
+  
 
   const calculateResult = () => {
     const input = text.join("") //Remove all commas
-
     setResult(math.evaluate(input));
   }
 
+
+  
   const resetInput = () => {
     setText("");
     setResult("");
@@ -56,7 +67,7 @@ const App = () => {
           <Button symbol="=" handleClick={calculateResult}/>
           <Button symbol="-" color={buttonColor} handleClick={addToText} />
         </div>
-        <Button symbol="Clear" color="red" handleClick={resetInput} />
+        <Button symbol="Clear" color="#00abf0" handleClick={resetInput} />
       </div>
     </div>
   );
